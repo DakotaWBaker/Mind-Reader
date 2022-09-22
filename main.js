@@ -61,13 +61,13 @@ example.innerHTML = mainObj[pageNum].helperText;
 helper.innerHTML = mainObj[pageNum].exampleText;
 if (pageNum === 0){
   goButton.style.visibility = 'visible';
-  resetButton.style.visibility = 'hidden';
+  reset.style.visibility = 'hidden';
   next.style.visibility = 'hidden';
   prev.style.visibility = 'hidden';
 } else {
   goButton.style.visibility = 'hidden';
-  resetButton.style.visibility = 'visible';
-  next.style.visibility = 'visible';
+  reset.style.visibility = 'visible';
+  next.style.visibility = 'visible'
   prev.style.visibility = 'visible';
 }
 }

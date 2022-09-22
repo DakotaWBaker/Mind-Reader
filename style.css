@@ -26,12 +26,15 @@
     #resetButton {
         border-radius: 100%;
         margin-left: 300px;
-        padding: 10px, 10px, 10px, 10px;
     }
     #goButton {
         border-radius: 100%;
         padding: 7px;
         margin-left: 300px;
+    }
+
+    #resetButton i {
+        pointer-events: none;
     }
 
    
