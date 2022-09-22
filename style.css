@@ -1,0 +1,38 @@
+#header {
+    text-align: center;
+    font-size: 50px;
+}
+#head {
+    height: 400px;
+}
+#example {
+    text-align: center;
+    opacity: .5;
+    font-size: 25px;
+}
+#next, #prev {
+    color: white;
+    border: 1px solid black;
+    border-radius: 0%;
+    width: 70%;
+    opacity: 0.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: .5px;
+    }
+    #buttons{
+        height: 500px;
+    }
+    #resetButton {
+        border-radius: 100%;
+        margin-left: 300px;
+        padding: 10px, 10px, 10px, 10px;
+    }
+    #goButton {
+        border-radius: 100%;
+        padding: 7px;
+        margin-left: 300px;
+    }
+
+   
+    
