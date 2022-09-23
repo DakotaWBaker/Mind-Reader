@@ -6,7 +6,7 @@ const go = document.getElementById('goButton');
 const reset = document.getElementById('resetButton');
 const prev = document.getElementById('prev');
 let pageNum = 0;
-
+let arraySym = ['!', '@', '#', '$', '%', '^', '&', '*', '~'];
 
 let mainObj = [{
   //page 1
@@ -52,42 +52,68 @@ let mainObj = [{
   goButton: "RESET", //this will be changing the icon instead of text
 
 }]
-console.log(mainObj[1]);
+
+function generateNumbers() {
+  let numNum = '';
+  nineSym = arraySym[Math.floor(Math.random() * 9)];
+  for (let i = 0; i < 100; i++) {
+    if (i % 9 === 0) {
+      numNum += i + ': ' + nineSym + '<br>';
+    } else {
+      let nineSym = arraySym[Math.floor(Math.random() * 9)];
+      numNum += i + ' :' + nineSym + '<br>';
+    }
+  }
+  header.innerHTML = numNum;
+}
 
 function updatePage() {
-header.innerHTML = mainObj[pageNum].headerText;
-next.innerHTML = mainObj[pageNum].nextButton;
-example.innerHTML = mainObj[pageNum].helperText;
-helper.innerHTML = mainObj[pageNum].exampleText;
-if (pageNum === 0){
-  goButton.style.visibility = 'visible';
-  reset.style.visibility = 'hidden';
-  next.style.visibility = 'hidden';
-  prev.style.visibility = 'hidden';
-} else {
-  goButton.style.visibility = 'hidden';
-  reset.style.visibility = 'visible';
-  next.style.visibility = 'visible'
-  prev.style.visibility = 'visible';
-}
+  if (pageNum === 4) {
+    generateNumbers()
+  } else if (pageNum === 5) {
+    header.innerHTML = nineSym;
+  }
+  else {
+  header.innerHTML = mainObj[pageNum].headerText;
+  }
+  next.innerHTML = mainObj[pageNum].nextButton;
+  example.innerHTML = mainObj[pageNum].helperText;
+  helper.innerHTML = mainObj[pageNum].exampleText;
+  if (pageNum === 0) {
+    goButton.style.visibility = 'visible';
+    reset.style.visibility = 'hidden';
+    next.style.visibility = 'hidden';
+    prev.style.visibility = 'hidden';
+  } else if (pageNum === 5 ) {
+    goButton.style.visibility = 'hidden';
+    reset.style.visibility = 'visible';
+    next.style.visibility = 'hidden';
+    prev.style.visibility = 'visible';
+  }
+  else {
+    goButton.style.visibility = 'hidden';
+    reset.style.visibility = 'visible';
+    next.style.visibility = 'visible'
+    prev.style.visibility = 'visible';
+  }
 }
 updatePage();
 
 
 
 function nextPage(e) {
-if (e.target.id === 'next' || e.target.id === 'goButton') {
+  if (e.target.id === 'next' || e.target.id === 'goButton') {
     pageNum++;
   }
   else if (e.target.id === 'prev') {
     pageNum--;
-  } 
+  }
   else if (e.target.id === 'resetButton') {
     pageNum = 0;
   }
   updatePage()
- 
-  }
+
+}
 
 
 next.addEventListener('click', nextPage);
