@@ -1,0 +1,52 @@
+#header {
+    text-align: center;
+    font-size: 50px;
+}
+#head {
+    height: 375px;
+}
+#second {
+    height: 93px;
+}
+#third {
+    height: 37.5px;
+}
+#fourth {
+   height: 75px;
+}
+#example, #helper {
+    text-align: center;
+    opacity: .5;
+    font-size: 25px;
+}
+#next, #prev {
+    color: white;
+    border: 1px solid black;
+    border-radius: 0%;
+    width: 70%;
+    opacity: 0.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: .5px;
+    }
+   
+    #resetButton {
+        border: 1px solid black;
+        border-radius: 100%;
+       /* margin: 0 0 700px 290px; */
+        padding: 20px;
+        
+    }
+    #goButton {
+        border: 1px solid black;
+        border-radius: 100%;
+        padding: 20px;
+        margin: 0px 0 0 220px;
+    }
+
+    #resetButton i {
+        pointer-events: none;
+    }
+
+   
+    
